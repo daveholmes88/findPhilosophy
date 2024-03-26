@@ -12,9 +12,9 @@ def find_link(url):
 
     page = requests.get(url)
 
-    soup = BeautifulSoup(page.content, "html.parser")
+    soup = BeautifulSoup(page.content, 'html.parser')
 
-    div = soup.find("div", {"class": "mw-content-ltr mw-parser-output"})
+    div = soup.find('div', {'class': 'mw-content-ltr mw-parser-output'})
 
     for child in div:
         if child.name == 'p':
@@ -30,7 +30,7 @@ def find_link(url):
                     ending = string_without_parenthesis.find('"', beginning)
                     new_url = 'https://en.wikipedia.org' + string_without_parenthesis[beginning:ending]
                     print(new_url)
-                    if new_url == "https://en.wikipedia.org/wiki/Philosophy":
+                    if new_url == 'https://en.wikipedia.org/wiki/Philosophy':
                         print('hops', hops)
                         exit()
                     else:
