@@ -8,7 +8,7 @@ In order to run the command, first to install all requirements run:
 
 pip install -r requirements.txt
 
-Finally, run the python script using python getting_to_philosophy.py <URL OF WIKIPEDIA PAGE>
+Finally, run the python script using python getting_to_philosophy.py "WIKIPEDIA URL"
 
 For instance, run: 
 
