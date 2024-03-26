@@ -7,7 +7,7 @@ hops = 0
 def find_link(url):
     global hops
     if hops > 100:
-        print('hops is too high')
+        print('hops has reached the max, script is ending')
         exit()
 
     page = requests.get(url)
@@ -31,7 +31,7 @@ def find_link(url):
                     new_url = 'https://en.wikipedia.org' + string_without_parenthesis[beginning:ending]
                     print(new_url)
                     if new_url == 'https://en.wikipedia.org/wiki/Philosophy':
-                        print('hops', hops)
+                        print(hops, 'hops')
                         exit()
                     else:
                         hops += 1
